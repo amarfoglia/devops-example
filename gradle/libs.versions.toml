@@ -1,0 +1,11 @@
+[versions]
+kotlin = "1.6.21"
+
+[libraries]
+
+[bundles]
+
+[plugins]
+gitSemVer = { id = "org.danilopianini.git-sensitive-semantic-versioning", version = "0.3.0" }
+kotlin-jvm = { id = "org.jetbrains.kotlin.jvm", version.ref = "kotlin" }
+taskTree = { id = "com.dorongold.task-tree", version = "2.1.0" }
