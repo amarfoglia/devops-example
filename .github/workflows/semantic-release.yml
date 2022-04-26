@@ -10,6 +10,9 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v3
+      - uses: actions/setup-node@v2
+        with:
+          node-version: '14'
       - name: Semantic Release
         uses: cycjimmy/semantic-release-action@v3
         id: semantic-release
@@ -17,10 +20,8 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           semantic_version: 16
-          plugins: |
-            @semantic-release/commit-analyzer
+          extra_plugins: |
             @semantic-release/github
-            @semantic-release/release-notes-generator
             @semantic-release/git
       - name: After publishing
         if: steps.semantic.outputs.new_release_published == 'true'
