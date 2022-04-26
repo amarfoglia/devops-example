@@ -1,7 +1,7 @@
 name: Build
 on:
   pull_request:
-    branches: [ invalid ]
+    branches: [ test ]
 jobs:
   gradle:
     runs-on: ubuntu-latest
