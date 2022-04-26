@@ -1,5 +1,7 @@
 package it.unibo.example
 
 fun main() {
-    Logger("My Logger").print("Hello world!")
+    val logger = Logger("My Logger");
+    logger.print("Hello world!")
+    logger.print("Ciao mondo")
 }
