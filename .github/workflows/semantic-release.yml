@@ -17,10 +17,8 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           semantic_version: 16
-          plugins: |
-            @semantic-release/commit-analyzer
+          extra_plugins: |
             @semantic-release/github
-            @semantic-release/release-notes-generator
             @semantic-release/git
       - name: After publishing
         if: steps.semantic.outputs.new_release_published == 'true'
