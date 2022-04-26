@@ -15,10 +15,15 @@ jobs:
         id: semantic-release
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-#        with:
-#          extra_plugins: |
-#            @semantic-release/changelog@3.0.0
-#            @semantic-release/git
+        with:
+          semantic_version: 16
+          plugins: [
+            "@semantic-release/commit-analyzer",
+            "@semantic-release/github",
+            "@semantic-release/release-notes-generator",
+            "@semantic-release/changelog@3.0.0",
+            "@semantic-release/git"
+          ]
       - name: After publishing
         if: steps.semantic.outputs.new_release_published == 'true'
         run: |
