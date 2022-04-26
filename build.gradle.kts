@@ -1,6 +1,5 @@
 plugins {
     alias(libs.plugins.gitSemVer)
-    alias(libs.plugins.taskTree)
 }
 
 allprojects {

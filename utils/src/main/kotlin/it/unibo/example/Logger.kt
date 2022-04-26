@@ -1,5 +1,5 @@
 package it.unibo.example
 
-class Logger() {
-  fun print(out: String): Unit = println(out);
+class Logger(private val name: String) {
+  fun print(out: String): Unit = println("[${name}] -> $out")
 }

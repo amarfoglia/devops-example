@@ -1,5 +1,5 @@
 package it.unibo.example
 
 fun main() {
-    println("Hello world!")
+    Logger("My Logger").print("Hello world!")
 }

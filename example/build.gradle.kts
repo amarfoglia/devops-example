@@ -1,6 +1,11 @@
 plugins {
     application
     alias(libs.plugins.kotlin.jvm)
+    alias(libs.plugins.detekt)
+}
+
+detekt {
+    autoCorrect = true
 }
 
 application {
