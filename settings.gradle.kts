@@ -35,3 +35,6 @@ with(File(rootProject.projectDir, ".git/hooks/pre-commit")) {
     setExecutable(true)
 }
 
+
+
+

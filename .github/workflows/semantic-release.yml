@@ -11,6 +11,9 @@ jobs:
       - uses: actions/setup-node@v2
         with:
           node-version: '14'
+      - name: Install GH-Pages
+        run: |
+          npm install @qiwi/semantic-release-gh-pages-plugin -D
       - name: Semantic Release
         uses: cycjimmy/semantic-release-action@v3
         id: semantic-release
