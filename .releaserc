@@ -14,7 +14,6 @@
       {
         "assets": ["docs/CHANGELOG.md", "LICENSE"]
       }
-    ],
-    "@qiwi/semantic-release-gh-pages-plugin"
+    ]
   ]
 }
